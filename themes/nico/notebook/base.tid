@@ -70,13 +70,20 @@ h1.tc-site-title {
   z-index: 199;
 }
 
+<$list filter="[[$:/state/notebook-sidebar]get[text]else[no]match[no]]">
 .nc-bar.nc-topbar {
   top: 0;
   background: <<colour page-background>>;
-  max-width: calc({{$:/themes/nico/notebook/metrics/story-width}} + 40px);
   padding: 10px 20px;
+}
+</$list>
+
+<$list filter="[[$:/state/notebook-sidebar]get[text]else[no]match[yes]]">
+.nc-bar.nc-topbar {
+  max-width: calc({{$:/themes/nico/notebook/metrics/story-width}} + 40px);
   margin: 0 auto;
 }
+</$list>
 
 .nc-bar.nc-bottombar {
   position: fixed;
@@ -428,15 +435,15 @@ input:focus, textarea:focus {
   border-color: <<colour primary>>;
 }
 
-button {
-  border-radius: 1.5em;
-  border: 1px solid #ccc;
-  background: <<colour tiddler-background>>;
-  padding: .3em 1em;
-  cursor: pointer;
-  transition: box-shadow ease-in .1s;
-  color: <<color foreground>>;
-}
+<!-- button { -->
+<!--   border-radius: 1.5em; -->
+<!--   border: 1px solid #ccc; -->
+<!--   background: <<colour tiddler-background>>; -->
+<!--   padding: .3em 1em; -->
+<!--   cursor: pointer; -->
+<!--   transition: box-shadow ease-in .1s; -->
+<!--   color: <<color foreground>>; -->
+<!-- } -->
 
 button:focus, button:active {
   outline: 0 none;

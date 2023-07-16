@@ -10,6 +10,9 @@ daylight module
 
 // TODO: set localstorage
 
+// window.matchMedia || alert('您的浏览器不支持prefers-color-scheme媒体查询');
+// 浏览器支持, 但是浏览器不兼容系统;
+
 // pagecontrol, like three notebookPalette
 const currentMode = 'auto'; // dark || light || auto
 
@@ -31,8 +34,12 @@ function toggleMode() {
 }
 
 function setThemeMode(mode) {
+  // TODO
+  // document.documentElement.style.transition = 'all .3s ease .3s';
   document.documentElement.classList.remove('light', 'dark');
   document.documentElement.classList.add(mode);
+  // bug
+  // document.body.classList.toggle(mode);
   localStorage.theme = mode;
 
   const tips = mode === 'dark' ? '🌜深色' : '🌅 浅色';

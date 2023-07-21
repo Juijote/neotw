@@ -1,0 +1,26 @@
+[
+  {
+    "element": ".tc-story-river",
+    "popover": {
+      "title": "stroy river",
+      "description": "tc-story-river",
+      "position": "right"
+    }
+  },
+  {
+    "element": ".tc-tiddler-title",
+    "popover": {
+      "title": "Tiddler Title",
+      "description": "Tiddler Title",
+      "position": "right"
+    }
+  },
+  {
+    "element": ".tc-subtitle",
+    "popover": {
+      "title": "subtitle",
+      "description": "subTitle",
+      "position": "bottom"
+    }
+  }
+]

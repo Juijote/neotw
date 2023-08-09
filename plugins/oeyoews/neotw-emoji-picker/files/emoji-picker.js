@@ -20,7 +20,7 @@ function emojiComponent() {
     debouncedSearchEmoji(event);
   };
   input.className =
-    'px-4 py-2 bg-white border border-gray-300 rounded shadow-sm focus:outline-none focus:border-indigo-300 w-4/5';
+    'px-4 py-2 border-none rounded shadow-sm focus:outline-none w-4/5';
 
   const placeholder = $tw.wiki.getTiddlerText(
     '$:/language/emoji-picker/placeholder',
@@ -47,7 +47,7 @@ function emojiComponent() {
 
   // Create main container
   var container = document.createElement('div');
-  container.className = 'max-w-md w-full bg-white p-4 rounded-lg';
+  container.className = 'max-w-md w-full p-4 rounded-lg';
   container.appendChild(form);
   container.appendChild(emojiContainer);
   const virtualRoot = document.createElement('div');
@@ -86,9 +86,7 @@ function emojiComponent() {
         emoji.classList.add(
           'cursor-pointer',
           'py-4',
-          'bg-gray-100',
           'rounded',
-          'hover:bg-gray-200',
           'transition',
           'duration-200',
           'flex',
